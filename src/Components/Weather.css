@@ -1,0 +1,56 @@
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 24px;
+}
+
+hr {
+  background-color: var(--primary-color);
+  height: 4px;
+  margin: 0 auto;
+  max-width: 80px;
+  text-align: center;
+}
+
+.weather .weather__input-form div,
+.weather .weather__city div,
+.weather .weather__today-detail {
+  padding: 0 4px;
+  margin-bottom: 12px;
+}
+
+.weather .weather__input-form .form-control {
+  background-color: var(--background-light);
+}
+
+.weather .weather__input-form .form-control:focus {
+  box-shadow: none;
+  border-color: (var(--primary-color));
+}
+
+.weather .weather__input-form .btn-searching {
+  background-color: var(--primary-color);
+  color: var(--background-light);
+}
+
+.weather .weather__input-form .btn-searching:hover {
+  background-color: var(--secondary-color);
+}
+
+.weather .weather__today-weather h2 {
+  margin-left: 12px;
+  font-size: 60px;
+  line-height: 1;
+}
+
+.weather .weather__today-weather .measure,
+.weather .weather__today-weather .measure a {
+  font-weight: bold;
+  color: var(--light-font);
+  text-decoration: none;
+}
