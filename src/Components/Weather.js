@@ -6,7 +6,7 @@ import TodayDetailCard from "./TodayDetailCard";
 
 import "./Weather.css";
 
-export default function Weahter() {
+export default function Weahter(props) {
   const [weatherData, setWeatherData] = useState({ load: false });
 
   function showData(response) {
@@ -14,8 +14,8 @@ export default function Weahter() {
       load: true,
       cityName: response.data.name,
       country: response.data.sys.country,
-      date: "Wednesday, 16:47",
-      month: "September 14, 2022",
+      date: "Wed, 16:47",
+      month: "Sep 14, 2022",
       temp: Math.round(response.data.main.temp),
       tempMin: Math.round(response.data.main.temp_min),
       tempMax: Math.round(response.data.main.temp_max),
@@ -67,12 +67,12 @@ export default function Weahter() {
         {inputForm}
 
         <div className="row weather__city">
-          <div className="col-6">
+          <div className="col-9">
             <h1>
               {weatherData.cityName}, {weatherData.country}
             </h1>
           </div>
-          <div className="col-6 text-end">
+          <div className="col-3 text-end">
             <h4>{weatherData.date}</h4>
             <h4>{weatherData.month}</h4>
           </div>
@@ -138,10 +138,8 @@ export default function Weahter() {
       </div>
     );
   } else {
-    let cityName = "Kyiv";
-    let units = "metric";
     const apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
-    const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+    const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${props.units}`;
     axios.get(apiCall).then(showData);
 
     return (

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Los Angeles" units="metric" />
       </div>
       <footer className="text-center">
         The app was coded by Anna Kohut and is open-sourced.
