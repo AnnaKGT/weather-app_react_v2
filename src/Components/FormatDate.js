@@ -1,0 +1,49 @@
+import React from "react";
+
+export default function FormatDate(props) {
+  let year = props.date.getFullYear();
+  let date = props.date.getDate();
+  let day = props.date.getDay();
+  let month = props.date.getMonth();
+  let hours = props.date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = props.date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let monthes = [
+    "Jun",
+    "Feb",
+    "March",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Nov",
+    "Dec",
+  ];
+
+  function Time(time) {
+    if (time < 10) {
+      return `0${time}`;
+    } else {
+      return time;
+    }
+  }
+
+  if (props.type === "currentDate") {
+    return (
+      <h4>
+        {weekDays[day]}, {hours}:{minutes} {monthes[month]} {date}, {year}
+      </h4>
+    );
+  } else {
+    return `${hours}:${minutes}`;
+  }
+}

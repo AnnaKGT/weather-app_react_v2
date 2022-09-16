@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Oval } from "react-loader-spinner";
-
+import FormatDate from "./FormatDate";
 import TodayDetailCard from "./TodayDetailCard";
 
 import "./Weather.css";
@@ -14,8 +14,7 @@ export default function Weahter(props) {
       load: true,
       cityName: response.data.name,
       country: response.data.sys.country,
-      date: "Wed, 16:47",
-      month: "Sep 14, 2022",
+      date: new Date(response.data.dt * 1000),
       temp: Math.round(response.data.main.temp),
       tempMin: Math.round(response.data.main.temp_min),
       tempMax: Math.round(response.data.main.temp_max),
@@ -23,13 +22,14 @@ export default function Weahter(props) {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       description: response.data.weather[0].description,
-      sunset: response.data.sys.sunset,
-      sunrise: response.data.sys.sunrise,
+      sunset: new Date(response.data.sys.sunset * 1000),
+      sunrise: new Date(response.data.sys.sunrise * 1000),
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
-
-    console.log(response);
   }
+
+  let sunriseTime = <FormatDate date={weatherData.sunrise} type="time" />;
+  let sunsetTime = <FormatDate date={weatherData.sunset} type="time" />;
 
   const inputForm = (
     <div className="row weather__input-form text-end">
@@ -73,8 +73,7 @@ export default function Weahter(props) {
             </h1>
           </div>
           <div className="col-3 text-end">
-            <h4>{weatherData.date}</h4>
-            <h4>{weatherData.month}</h4>
+            <FormatDate date={weatherData.date} type="currentDate" />
           </div>
         </div>
 
@@ -121,18 +120,10 @@ export default function Weahter(props) {
             />
           </div>
           <div className="col weather__today-detail">
-            <TodayDetailCard
-              param="Sunrise"
-              icon="i"
-              measure={weatherData.sunrise}
-            />
+            <TodayDetailCard param="Sunrise" icon="i" measure={sunriseTime} />
           </div>
           <div className="col weather__today-detail">
-            <TodayDetailCard
-              param="Sunset"
-              icon="i"
-              measure={weatherData.sunset}
-            />
+            <TodayDetailCard param="Sunset" icon="i" measure={sunsetTime} />
           </div>
         </div>
       </div>
