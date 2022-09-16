@@ -3,7 +3,7 @@ h1 {
   font-weight: bold;
 }
 
-h3 {
+h4 {
   font-size: 16px;
   margin: 0;
   line-height: 24px;
@@ -53,4 +53,10 @@ hr {
   font-weight: bold;
   color: var(--light-font);
   text-decoration: none;
+}
+
+.loader-spinners {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
 }
