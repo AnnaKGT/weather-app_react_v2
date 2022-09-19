@@ -55,7 +55,10 @@ hr {
   line-height: 1;
 }
 
-.weather .weather__today-weather .measure,
+.weather .weather__today-weather .measure {
+  font-weight: bold;
+  color: var(--dark-font);
+}
 .weather .weather__today-weather .measure a {
   font-weight: bold;
   color: var(--light-font);

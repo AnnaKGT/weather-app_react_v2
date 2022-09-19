@@ -11,6 +11,7 @@ export default function Weahter(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function showData(response) {
+    console.log(response.data);
     setWeatherData({
       load: true,
       cityName: response.data.name,
@@ -23,15 +24,17 @@ export default function Weahter(props) {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       description: response.data.weather[0].description,
-      sunset: new Date(response.data.sys.sunset * 1000),
-      sunrise: new Date(response.data.sys.sunrise * 1000),
+      pressure: response.data.main.pressure,
+      sunset: response.data.sys.sunset,
+      sunrise: response.data.sys.sunrise,
+      timezone: response.data.timezone,
       icon: response.data.weather[0].icon,
     });
   }
 
   function searchingCity() {
     const apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
-    const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${props.units}`;
+    const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiCall).then(showData);
   }
 
