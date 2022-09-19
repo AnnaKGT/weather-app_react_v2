@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Weather from "./Components/Weather.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -16,6 +17,14 @@ function App() {
           rel="noopener noreferrer"
         >
           Anna Kohut
+        </a>{" "}
+        on the workshop from{" "}
+        <a
+          href="https://www.shecodes.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SheCodes
         </a>{" "}
         and is{" "}
         <a

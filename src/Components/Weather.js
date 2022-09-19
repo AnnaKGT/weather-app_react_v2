@@ -45,7 +45,21 @@ export default function Weahter(props) {
 
   function upDateCity(event) {
     setCity(event.target.value);
-    console.log(city);
+  }
+
+  function setCurrentPosition() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      let apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(showData);
+    });
+  }
+
+  function getPosition(event) {
+    event.preventDefault();
+    setCurrentPosition();
   }
 
   const inputForm = (
@@ -69,9 +83,15 @@ export default function Weahter(props) {
         </form>
       </div>
       <div className="col-2">
-        <button className="btn btn-searching w-100" type="button">
+        <a
+          href="/"
+          className="btn btn-searching w-100"
+          type="button"
+          title="Current location"
+          onClick={getPosition}
+        >
           <i className="fa-solid fa-house"></i>
-        </button>
+        </a>
       </div>
     </div>
   );
