@@ -1,12 +1,17 @@
 h1 {
   font-size: 32px;
   font-weight: bold;
-  line-height: 2.1;
+  line-height: 2;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
+  line-height: 24px;
+}
+
+h3 {
+  font-size: 20px;
   line-height: 24px;
 }
 
@@ -36,6 +41,7 @@ hr {
 
 .weather .weather__input-form .btn-searching {
   background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   color: var(--background-light);
 }
 

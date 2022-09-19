@@ -9,7 +9,23 @@ function App() {
         <Weather defaultCity="Kyiv" units="metric" />
       </div>
       <footer className="text-center">
-        The app was coded by Anna Kohut and is open-sourced.
+        The app was coded by{" "}
+        <a
+          href="https://deluxe-starship-7c78b0.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Anna Kohut
+        </a>{" "}
+        and is{" "}
+        <a
+          href="https://github.com/AnnaKGT/weather-app_react_v2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          open-sourced
+        </a>
+        .
       </footer>
     </div>
   );

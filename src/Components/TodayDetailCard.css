@@ -2,8 +2,13 @@ h6 {
   font-size: 12px;
 }
 
-.card-wrapper {
+.todayDetailCard {
   border: 1px solid var(--background-light);
   border-radius: 4px;
-  padding: 8px;
+  padding: 12px 20px;
+  font-size: 24px;
+}
+
+.todayDetailCard__dimension {
+  font-size: 12px;
 }

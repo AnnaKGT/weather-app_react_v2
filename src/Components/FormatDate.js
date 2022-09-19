@@ -14,7 +14,7 @@ export default function FormatDate(props) {
     minutes = `0${minutes}`;
   }
 
-  let weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let monthes = [
     "Jun",
     "Feb",
@@ -28,14 +28,6 @@ export default function FormatDate(props) {
     "Nov",
     "Dec",
   ];
-
-  function Time(time) {
-    if (time < 10) {
-      return `0${time}`;
-    } else {
-      return time;
-    }
-  }
 
   if (props.type === "currentDate") {
     return (
