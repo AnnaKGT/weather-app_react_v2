@@ -22,6 +22,8 @@ export default function WeatherInfo(props) {
           temp={props.data.temp}
           tempMin={props.data.tempMin}
           tempMax={props.data.tempMax}
+          unit={props.unit}
+          setUnit={props.setUnit}
         />
         <h3 className="text-capitalize mb-3">{props.data.description}</h3>
         <hr />
@@ -30,11 +32,12 @@ export default function WeatherInfo(props) {
       <TodayDetailCarousel
         wind={props.data.wind}
         humidity={props.data.humidity}
-        tempFeels={props.data.tempFeels + "°"}
+        tempFeels={props.data.tempFeels}
         pressure={props.data.pressure}
         sunrise={props.data.sunrise}
         sunset={props.data.sunset}
         timezone={props.data.timezone}
+        unit={props.unit}
       />
     </div>
   );

@@ -1,3 +1,9 @@
-.today-detail .carousel-control-next-icon {
-  color: red;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 5px;
+  opacity: 0.1;
+}
+
+.today-details__carousel-item {
+  margin: 0 1px;
 }

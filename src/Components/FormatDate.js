@@ -35,6 +35,13 @@ export default function FormatDate(props) {
         {weekDays[day]}, {hours}:{minutes} {monthes[month]} {date}, {year}
       </h4>
     );
+  } else if (props.type === "forecast") {
+    return (
+      <h4>
+        {weekDays[day]}, <br />
+        {monthes[month]} {date}
+      </h4>
+    );
   } else {
     return `${hours}:${minutes}`;
   }

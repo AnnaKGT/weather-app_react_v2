@@ -1,0 +1,40 @@
+.WeatherForecast {
+  border: 1px solid var(--background-light);
+  border-radius: 4px;
+  margin: 12px 4px;
+  padding: 16px 0;
+}
+
+.WeatherForecast-day h4,
+.WeatherForecast-details {
+  font-size: 13px;
+  line-height: 1.2;
+  margin: 2px 0;
+}
+
+.WeatherForecast-day {
+  margin-left: 12px;
+  margin-top: 4px;
+}
+
+.WeatherForecast-details i {
+  margin: 2px 0 0;
+  width: 18px;
+  height: 18px;
+  font-size: 14px;
+}
+
+.WeatherForecast-details {
+  padding: 0 4px;
+}
+
+.WeatherForecast-temp span {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 4px;
+}
+
+.WeatherForecast-details-block {
+  max-width: 105px;
+  margin-right: 16px;
+}

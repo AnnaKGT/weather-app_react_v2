@@ -19,8 +19,13 @@ hr {
   background-color: var(--primary-color);
   height: 4px;
   margin: 0 auto;
-  max-width: 80px;
+  max-width: 20px;
   text-align: center;
+}
+
+.weather-sepForecast {
+  margin: 12px auto;
+  max-width: 80px;
 }
 
 .weather .weather__input-form div,

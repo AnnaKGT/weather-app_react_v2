@@ -1,29 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherTemp(props) {
-  const [unit, setUnit] = useState("celsius");
-
   function showCelsius(event) {
     event.preventDefault();
-    setUnit("celsius");
+    props.setUnit("celsius");
   }
 
   function showFahrenheit(event) {
     event.preventDefault();
-    setUnit("fahrenheit");
+    props.setUnit("fahrenheit");
   }
 
   function convertFahrenheit(temp) {
     return Math.round((temp * 9) / 5 + 32);
   }
 
-  if (unit === "celsius") {
+  if (props.unit === "celsius") {
     return (
       <div className="weatherTemp">
         <div className="d-flex justify-content-center">
-          <WeatherIcon icon={props.iconCode} />
+          <WeatherIcon icon={props.iconCode} size={64} />
 
           <h2>{props.temp}</h2>
           <span className="measure">

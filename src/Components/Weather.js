@@ -3,17 +3,21 @@ import axios from "axios";
 import { Oval } from "react-loader-spinner";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import "./Weather.css";
 
 export default function Weahter(props) {
   const [weatherData, setWeatherData] = useState({ load: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function showData(response) {
-    console.log(response.data);
     setWeatherData({
       load: true,
+
+      coordLat: response.data.coord.lat,
+      coordLon: response.data.coord.lon,
       cityName: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
@@ -100,7 +104,9 @@ export default function Weahter(props) {
     return (
       <div className="weather">
         {inputForm}
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
+        <hr className="weather-sepForecast" />
+        <WeatherForecast unit={unit} data={weatherData} />
       </div>
     );
   } else {
