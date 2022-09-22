@@ -18,14 +18,9 @@
 }
 
 .WeatherForecast-details i {
-  margin: 2px 0 0;
   width: 18px;
   height: 18px;
   font-size: 14px;
-}
-
-.WeatherForecast-details {
-  padding: 0 4px;
 }
 
 .WeatherForecast-temp span {
@@ -35,6 +30,5 @@
 }
 
 .WeatherForecast-details-block {
-  max-width: 105px;
-  margin-right: 16px;
+  margin-top: 8px;
 }

@@ -21,30 +21,34 @@ export default function WeatherForecastDay(props) {
   }
 
   return (
-    <div className="WeatherForecast shadow-sm d-flex justify-content-between">
-      <div className=" WeatherForecast-day">
-        <FormatDate date={date} type={"forecast"} />
-      </div>
-      <div className=" WeatherForecast-temp d-flex align-items-center">
-        <WeatherIcon
-          icon={icon}
-          size={36}
-          className="WeatherForecast-temp-icon"
-        />{" "}
-        <span className="ms-3">{Math.round(tempMax)}°</span>{" "}
-        <span className="text-muted ms-2"> {Math.round(tempMin)}°</span>
+    <div className="WeatherForecast shadow-sm">
+      <div className="d-flex justify-content-between">
+        <div className=" WeatherForecast-day">
+          <FormatDate date={date} type={"forecast"} />
+        </div>
+        <div className=" WeatherForecast-temp d-flex align-items-center">
+          <WeatherIcon
+            icon={icon}
+            size={36}
+            className="WeatherForecast-temp-icon"
+          />{" "}
+          <span className="ms-3">{Math.round(tempMax)}°</span>{" "}
+          <span className="text-muted ms-2"> {Math.round(tempMin)}°</span>
+        </div>
       </div>
       <div className="WeatherForecast-details-block">
-        <div className="row">
-          <div className="col WeatherForecast-details">
+        <div className="row WeatherForecast-details">
+          <div className="col">
             <div>
               <i className="fa-solid fa-droplet"></i> {humidity}%
             </div>
+          </div>
+          <div className="col">
             <div>
               <i className="fa-solid fa-wind"></i> {Math.round(wind)}m/s
             </div>
           </div>
-          <div className="col WeatherForecast-details">
+          <div className="col">
             <WiSunrise size={20} color="#474555" />{" "}
             <FormatSunTime
               type="sunrise"
@@ -52,6 +56,8 @@ export default function WeatherForecastDay(props) {
               sunsetTime={sunSet}
               timezone={timezone}
             />
+          </div>
+          <div className="col">
             <WiSunset size={20} color="#474555" />{" "}
             <FormatSunTime
               type="sunset"

@@ -38,8 +38,7 @@ export default function FormatDate(props) {
   } else if (props.type === "forecast") {
     return (
       <h4>
-        {weekDays[day]}, <br />
-        {monthes[month]} {date}
+        {weekDays[day]}, {monthes[month]} {date}
       </h4>
     );
   } else {
