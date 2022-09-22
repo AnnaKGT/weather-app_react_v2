@@ -27,17 +27,17 @@ export default function WeatherForecast(props) {
     return (
       <div>
         {forecast.daily.map(function(dailyForecast, index) {
-          if (index > 0 && index < 6) {
-            return (
-              <div key={index}>
-                <WeatherForecastDay
-                  data={dailyForecast}
-                  timezone={forecast.timezone_offset}
-                  units={units}
-                />
-              </div>
-            );
-          }
+          //   if (index > 0 && index < 6) {
+          return (
+            <div key={index}>
+              <WeatherForecastDay
+                data={dailyForecast}
+                timezone={forecast.timezone_offset}
+                units={units}
+              />
+            </div>
+          );
+          //   }
         })}
       </div>
     );
