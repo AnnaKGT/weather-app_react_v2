@@ -51,7 +51,7 @@ export default function WeatherForecastDay(props) {
             </div>
           </div>
           <div className="col">
-            <WiSunrise size={18} color="#474555" />{" "}
+            <WiSunrise size={16} color="#474555" />{" "}
             <FormatSunTime
               type="sunrise"
               sunriseTime={sunRise}
@@ -60,7 +60,7 @@ export default function WeatherForecastDay(props) {
             />
           </div>
           <div className="col">
-            <WiSunset size={18} color="#474555" />{" "}
+            <WiSunset size={16} color="#474555" />{" "}
             <FormatSunTime
               type="sunset"
               sunriseTime={sunRise}
