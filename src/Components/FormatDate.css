@@ -1,0 +1,10 @@
+.formatDate_current,
+.formatDate_forecast {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.formatDate_current {
+  margin-top: 8px;
+}

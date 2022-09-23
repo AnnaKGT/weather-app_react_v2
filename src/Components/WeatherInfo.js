@@ -7,16 +7,14 @@ export default function WeatherInfo(props) {
   return (
     <div className="weatherInfo">
       <div className="row weather__city">
-        <div className="col-9">
-          <h1>
-            {props.data.cityName}, {props.data.country}
-          </h1>
+        <div className="col-8">
+          <h1>{props.data.cityName}</h1>
         </div>
-        <div className="col-3 text-end">
+        <div className="col-4 text-end">
           <FormatDate date={props.data.date} type="currentDate" />
         </div>
       </div>
-      <div className="weather__today-weather text-center mb-4">
+      <div className="weather__today-weather text-center mb-3">
         <WeatherTemp
           iconCode={props.data.icon}
           temp={props.data.temp}

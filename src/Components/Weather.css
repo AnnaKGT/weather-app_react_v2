@@ -2,6 +2,7 @@ h1 {
   font-size: 32px;
   font-weight: bold;
   line-height: 2;
+  padding: 0 4px;
 }
 
 h4 {
@@ -24,7 +25,7 @@ hr {
 }
 
 .weather-sepForecast {
-  margin: 12px auto;
+  margin: 16px auto;
   max-width: 80px;
 }
 
@@ -32,11 +33,12 @@ hr {
 .weather .weather__city div,
 .weather .weather__today-detail {
   padding: 0 4px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
-.weather .weather__input-form .form-control {
-  background-color: var(--background-light);
+.weather__input-form,
+.weather__city {
+  margin: 0 2px;
 }
 
 .weather .weather__input-form .form-control:focus {

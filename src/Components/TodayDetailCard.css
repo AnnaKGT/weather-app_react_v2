@@ -1,14 +1,23 @@
 h6 {
-  font-size: 12px;
-}
-
-.todayDetailCard {
-  border: 1px solid var(--background-light);
-  border-radius: 4px;
-  padding: 12px;
-  font-size: 24px;
+  font-size: 10px;
+  margin-bottom: 4px;
 }
 
 .todayDetailCard__dimension {
   font-size: 12px;
+}
+
+.todayDetailCard {
+  background-color: var(--background-light);
+  border: 1px solid var(--background-light);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 2px;
+  font-size: 24px;
+}
+
+@media (max-width: 900px) {
+  .todayDetailCard {
+    padding: 12px 8px;
+  }
 }

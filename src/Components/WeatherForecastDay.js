@@ -22,22 +22,24 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div className="WeatherForecast shadow-sm">
-      <div className="d-flex justify-content-between">
-        <div className=" WeatherForecast-day">
-          <FormatDate date={date} type={"forecast"} />
-        </div>
-        <div className=" WeatherForecast-temp d-flex align-items-center">
+      <div className="WeatherForecast-day">
+        <FormatDate date={date} type={"forecast"} />
+      </div>
+      <div className="d-flex justify-content-center">
+        <div className="weatherForecast__icon">
           <WeatherIcon
             icon={icon}
             size={36}
             className="WeatherForecast-temp-icon"
-          />{" "}
-          <span className="ms-3">{Math.round(tempMax)}°</span>{" "}
-          <span className="text-muted ms-2"> {Math.round(tempMin)}°</span>
+          />
+        </div>
+        <div className="WeatherForecast-temp">
+          <span>{Math.round(tempMax)}°</span>{" "}
+          <span className="text-muted"> {Math.round(tempMin)}°</span>
         </div>
       </div>
       <div className="WeatherForecast-details-block">
-        <div className="row WeatherForecast-details">
+        <div className="row WeatherForecast-details text-center">
           <div className="col">
             <div>
               <i className="fa-solid fa-droplet"></i> {humidity}%

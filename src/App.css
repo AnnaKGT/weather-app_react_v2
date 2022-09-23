@@ -2,7 +2,7 @@
   --primary-color: #363f8a;
   --secondary-color: #8f8cb8;
   --background-light: #f9f8ff;
-  --background-light_second: #fffade;
+  --background-light_second: #fffefb;
   --dark-font: #474555;
   --light-font: #aba9bb;
 
@@ -13,11 +13,14 @@
 .App {
   border: 1px solid var(--background-light);
   border-radius: 4px;
-  background-color: var(--background-light);
   color: var(--dark-font);
-  padding: 16px;
+  padding: 16px 4px;
   margin: 24px auto;
   max-width: 450px;
+}
+
+.app__weather {
+  padding: 0;
 }
 
 .App footer {
@@ -26,6 +29,6 @@
 
 @media (max-width: 900px) {
   .App {
-    padding: 16px 4px;
+    padding: 4px 4px;
   }
 }
