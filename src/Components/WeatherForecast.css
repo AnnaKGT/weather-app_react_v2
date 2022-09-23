@@ -6,10 +6,14 @@
   padding: 12px 12px;
 }
 
+.WeatherForecast-details {
+  font-size: 14px;
+}
+
 .WeatherForecast-details i {
   width: 18px;
   height: 18px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .weatherForecast__icon {

@@ -3,16 +3,20 @@ h6 {
   margin-bottom: 4px;
 }
 
-.todayDetailCard__dimension {
-  font-size: 12px;
-}
-
 .todayDetailCard {
   background-color: var(--background-light);
   border: 1px solid var(--background-light);
   border-radius: 4px;
   padding: 12px 16px;
   margin: 0 2px;
+  font-size: 22px;
+}
+
+.todayDetailCard__dimension {
+  font-size: 12px;
+}
+
+.todayDetailCard__icon {
   font-size: 24px;
 }
 
