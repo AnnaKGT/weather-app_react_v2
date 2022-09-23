@@ -22,7 +22,7 @@ export default function WeatherForecastDay(props) {
 
   return (
     <div className="WeatherForecast shadow-sm">
-      <div className="WeatherForecast-day">
+      <div className="WeatherForecast-day mb-2">
         <FormatDate date={date} type={"forecast"} />
       </div>
       <div className="d-flex justify-content-center">
