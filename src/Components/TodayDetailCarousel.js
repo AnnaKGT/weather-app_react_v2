@@ -65,7 +65,7 @@ export default function TodayDetailCarousel(props) {
             <div className="col weather__today-detail">
               <TodayDetailCard
                 param="Pressure"
-                icon={<WiBarometer size={28} color="#474555" />}
+                icon={<WiBarometer size={24} color="#474555" />}
                 measure={props.pressure}
                 dimension="hPa"
               />
@@ -73,7 +73,7 @@ export default function TodayDetailCarousel(props) {
             <div className="col weather__today-detail">
               <TodayDetailCard
                 param="Sunrise"
-                icon={<WiSunrise size={28} color="#474555" />}
+                icon={<WiSunrise size={24} color="#474555" />}
                 measure={
                   <FormatSunTime
                     type="sunrise"
@@ -87,7 +87,7 @@ export default function TodayDetailCarousel(props) {
             <div className="col weather__today-detail">
               <TodayDetailCard
                 param="Sunset"
-                icon={<WiSunset size={28} color="#474555" />}
+                icon={<WiSunset size={24} color="#474555" />}
                 measure={
                   <FormatSunTime
                     type="sunset"
