@@ -1,7 +1,7 @@
 :root {
   --primary-color: #363f8a;
-  --secondary-color: #8f8cb8;
-  --background-light: #f9f8ff;
+  --secondary-color: #a6c9ff;
+  --background-light: #f9f8ff68;
   --background-light_second: #fffefb;
   --dark-font: #474555;
   --light-font: #aba9bb;
@@ -12,6 +12,7 @@
 
 .App {
   border: 1px solid var(--background-light);
+  background-color: var(--secondary-color);
   border-radius: 4px;
   color: var(--dark-font);
   padding: 16px 4px;

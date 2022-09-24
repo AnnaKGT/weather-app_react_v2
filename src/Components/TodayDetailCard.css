@@ -10,7 +10,7 @@ h6 {
   border-radius: 4px;
   padding: 12px 16px;
   margin: 0 2px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .todayDetailCard__dimension {
@@ -18,7 +18,7 @@ h6 {
 }
 
 .todayDetailCard__icon {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 @media (max-width: 900px) {
