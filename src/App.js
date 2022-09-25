@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App shadow-sm">
+    <div className="App shadow-lg">
       <div className="container app__weather">
         <Weather defaultCity="Kyiv" />
       </div>

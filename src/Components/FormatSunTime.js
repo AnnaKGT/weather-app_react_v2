@@ -21,6 +21,9 @@ export default function FormatSunTime(props) {
 
   let sunSetMinutes = sunSetDate.getUTCMinutes();
   let sunRiseMinutes = sunRiseDate.getUTCMinutes();
+  // console.log(`SunSet ${sunSetUTCHour} ${sunSetHour}:${sunSetMinutes}`);
+  // console.log(`SunRise ${sunRiseUTCHour} ${sunRiseHour}:${sunRiseMinutes}`);
+  // console.log(`${timeZoneInHours}`);
 
   // This code accounts for timezones with half-hour values (for example, a search for Kabul, which has a UTC offset of 4.5 hours).
   if (
@@ -51,13 +54,13 @@ export default function FormatSunTime(props) {
   if (sunRiseHour <= 36 && sunRiseHour > 24) {
     sunRiseHour = sunRiseHour - 24;
   } else if (sunRiseHour <= 0 && sunRiseHour >= -12) {
-    sunRiseHour = sunRiseHour + 12;
+    sunRiseHour = sunRiseHour + 24;
   }
 
   if (sunSetHour <= 36 && sunSetHour > 24) {
     sunSetHour = sunSetHour - 24;
   } else if (sunSetHour <= 0 && sunSetHour >= -12) {
-    sunSetHour = sunSetHour + 12;
+    sunSetHour = sunSetHour + 24;
   }
 
   if (sunSetMinutes < 10) {
