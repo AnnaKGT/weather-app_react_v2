@@ -51,13 +51,28 @@ export default function Weahter(props) {
     setCity(event.target.value);
   }
 
+  function apiError(error) {
+    let errorMsg = "An error has occurred. Please try again.";
+    if (error.response) {
+      let errorData = error.response.data;
+      errorMsg = errorData.message;
+    } else {
+      console.error(error, error.stack);
+    }
+
+    alert(errorMsg);
+  }
+
   function setCurrentPosition() {
     navigator.geolocation.getCurrentPosition(function(position) {
       let apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-      axios.get(apiUrl).then(showData);
+      axios
+        .get(apiUrl)
+        .then(showData)
+        .catch(apiError);
     });
   }
 
