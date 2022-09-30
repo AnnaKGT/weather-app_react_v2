@@ -1,6 +1,6 @@
 .WeatherForecast {
   background-color: var(--background-light);
-  border: 1px solid var(--background-light);
+
   border-radius: 4px;
   margin: 12px 4px;
   padding: 12px 12px;

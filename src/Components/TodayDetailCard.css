@@ -6,7 +6,7 @@ h6 {
 
 .todayDetailCard {
   background-color: var(--background-light);
-  border: 1px solid var(--background-light);
+
   border-radius: 4px;
   padding: 12px 16px;
   margin: 0 2px;

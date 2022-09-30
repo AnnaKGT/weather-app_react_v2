@@ -2,15 +2,16 @@ import React from "react";
 import "./FormatDate.css";
 
 export default function FormatDate(props) {
-  let year = props.date.getFullYear();
+  // let year = props.date.getFullYear();
+  let currentTime = new Date();
   let date = props.date.getDate();
   let day = props.date.getDay();
   let month = props.date.getMonth();
-  let hours = props.date.getHours();
+  let hours = currentTime.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = props.date.getMinutes();
+  let minutes = currentTime.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -25,18 +26,18 @@ export default function FormatDate(props) {
     "Saturday",
   ];
   let monthes = [
-    "Jan",
-    "Feb",
+    "January",
+    "Februaru",
     "March",
-    "Apr",
+    "April",
     "May",
     "June",
     "July",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "August",
+    "Septempber",
+    "October",
+    "November",
+    "December",
   ];
 
   if (props.type === "currentDate") {
@@ -44,7 +45,7 @@ export default function FormatDate(props) {
       <h4 className="formatDate_current">
         {weekDays[day]}, {hours}:{minutes}
         <br />
-        {monthes[month]} {date}, {year}
+        {monthes[month]} {date}
       </h4>
     );
   } else if (props.type === "forecast") {
