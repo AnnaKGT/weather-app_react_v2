@@ -1,8 +1,9 @@
 :root {
   --primary-color: #1a237e;
-  --secondary-color: #8c9dff31;
+  /* --secondary-color: #8c9dff31; */
   --background-light: #8c9dff31;
-  --background-light_second: #fafafa;
+  --background_app-dark: #9facfa31;
+  --background_app-light: #fafafa;
   --dark-font: #263238;
   --light-font: #eceff1;
 
@@ -13,8 +14,8 @@
 .App {
   background: linear-gradient(
     to top,
-    var(--background-light_second) 60%,
-    var(--background-light) 100%
+    var(--background_app-light) 80%,
+    var(--background_app-dark) 100%
   );
   border-radius: 16px;
   color: var(--dark-font);
