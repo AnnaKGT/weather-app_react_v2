@@ -48,7 +48,7 @@ hr {
 
 .weather .weather__input-form .btn-searching {
   background-color: var(--secondary-color);
-  border: 1 solid var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   color: var(--light-font);
 }
 
