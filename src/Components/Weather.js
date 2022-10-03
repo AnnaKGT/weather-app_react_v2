@@ -12,7 +12,7 @@ export default function Weahter(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [unit, setUnit] = useState("celsius");
 
-  function showData(response) {
+  const showData = (response) => {
     setWeatherData({
       load: true,
 
@@ -34,9 +34,9 @@ export default function Weahter(props) {
       timezone: response.data.timezone,
       icon: response.data.weather[0].icon,
     });
-  }
+  };
 
-  function searchingCity() {
+  const searchingCity = () => {
     const apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
     const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios
@@ -47,18 +47,18 @@ export default function Weahter(props) {
           "Opps... Please, check the spelling of the city name and try again. Thank you!🌞"
         );
       });
-  }
+  };
 
-  function submitForm(event) {
+  const submitForm = (event) => {
     event.preventDefault();
     searchingCity();
-  }
+  };
 
-  function upDateCity(event) {
+  const upDateCity = (event) => {
     setCity(event.target.value);
-  }
+  };
 
-  function apiError(error) {
+  const apiError = (error) => {
     let errorMsg = "An error has occurred. Please try again.";
     if (error.response) {
       let errorData = error.response.data;
@@ -68,9 +68,9 @@ export default function Weahter(props) {
     }
 
     alert(errorMsg);
-  }
+  };
 
-  function setCurrentPosition() {
+  const setCurrentPosition = () => {
     navigator.geolocation.getCurrentPosition(function(position) {
       let apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
       let lat = position.coords.latitude;
@@ -81,12 +81,12 @@ export default function Weahter(props) {
         .then(showData)
         .catch(apiError);
     });
-  }
+  };
 
-  function getPosition(event) {
+  const getPosition = (event) => {
     event.preventDefault();
     setCurrentPosition();
-  }
+  };
 
   const inputForm = (
     <div className="row weather__input-form text-end">

@@ -3,19 +3,19 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherTemp(props) {
-  function showCelsius(event) {
+  const showCelsius = (event) => {
     event.preventDefault();
     props.setUnit("celsius");
-  }
+  };
 
-  function showFahrenheit(event) {
+  const showFahrenheit = (event) => {
     event.preventDefault();
     props.setUnit("fahrenheit");
-  }
+  };
 
-  function convertFahrenheit(temp) {
+  const convertFahrenheit = (temp) => {
     return Math.round((temp * 9) / 5 + 32);
-  }
+  };
 
   if (props.unit === "celsius") {
     return (
