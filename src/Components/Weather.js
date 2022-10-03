@@ -39,7 +39,14 @@ export default function Weahter(props) {
   function searchingCity() {
     const apiKey = "1fd9d0abbac5edf293ecf453793c7cfa";
     const apiCall = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiCall).then(showData);
+    axios
+      .get(apiCall)
+      .then(showData)
+      .catch((error) => {
+        return alert(
+          "Opps... Please, check the spelling of the city name and try again. Thank you!🌞"
+        );
+      });
   }
 
   function submitForm(event) {
