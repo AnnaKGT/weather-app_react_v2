@@ -64,7 +64,8 @@ hr {
 }
 .weather .weather__today-weather .measure a {
   font-weight: bold;
-  color: var(--light-font);
+  color: var(--dark-font);
+  opacity: 0.4;
   text-decoration: none;
 }
 

@@ -14,6 +14,7 @@ export default function WeatherForecastDay(props) {
   let timezone = props.timezone;
   let sunSet = props.data.sunset;
   let sunRise = props.data.sunrise;
+  let description = props.data.weather[0].description;
 
   if (props.units === "imperial") {
     tempMax = Math.round((tempMax * 9) / 5 + 32);
@@ -34,10 +35,13 @@ export default function WeatherForecastDay(props) {
           />
         </div>
         <div className="WeatherForecast-temp">
-          <span>{Math.round(tempMax)}°</span>{" "}
+          <span>{Math.round(tempMax)}°</span>
           <span className="text-muted"> {Math.round(tempMin)}°</span>
         </div>
       </div>
+      <h4 className="WeatherForecast-description text-capitalize">
+        {description}
+      </h4>
       <div className="WeatherForecast-details-block">
         <div className="row WeatherForecast-details text-center">
           <div className="col">

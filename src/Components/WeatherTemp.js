@@ -32,7 +32,7 @@ export default function WeatherTemp(props) {
           </span>
         </div>
         <h3>
-          {props.tempMax}°<span className="text-muted"> {props.tempMin}°</span>
+          {props.tempMax}° <span className="text-muted"> {props.tempMin}°</span>
         </h3>
       </div>
     );
@@ -53,7 +53,7 @@ export default function WeatherTemp(props) {
         <h3>
           {convertFahrenheit(props.tempMax)}°
           <span className="text-muted">
-            {" "}
+            {"  "}
             {convertFahrenheit(props.tempMin)}°
           </span>
         </h3>

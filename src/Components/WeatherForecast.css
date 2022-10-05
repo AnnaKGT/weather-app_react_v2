@@ -30,3 +30,7 @@
 .WeatherForecast-details-block {
   margin-top: 4px;
 }
+
+.WeatherForecast-description {
+  text-align: center;
+}
