@@ -1,10 +1,10 @@
 :root {
   --primary-color: #0091ea;
-  --secondary-color: #002b73;
+  --secondary-color: #001a3b;
   --background-light: #80d9ff22;
   --background_app-dark: #039ae541;
   --background_app-light: #fafafa;
-  --dark-font: #263238;
+  --dark-font: #001a3b;
   --light-font: #eceff1;
 
   --heading-font: "Playfair Display", serif;
