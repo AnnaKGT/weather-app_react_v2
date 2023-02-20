@@ -27,14 +27,14 @@ export default function FormatDate(props) {
   ];
   let monthes = [
     "January",
-    "Februaru",
+    "February",
     "March",
     "April",
     "May",
     "June",
     "July",
     "August",
-    "Septempber",
+    "September",
     "October",
     "November",
     "December",
